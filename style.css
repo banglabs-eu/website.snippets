@@ -402,6 +402,11 @@ a.platform-active:hover { background: var(--accent-glow); }
   line-height: 1.7;
 }
 
+/* Card Links */
+a.card-link { color: inherit; text-decoration: none; display: block; }
+a.card-link h3 { color: var(--text-primary); }
+a.card-link p { color: var(--text-secondary); }
+
 /* Coming Soon Cards */
 .card-soon { position: relative; overflow: hidden; }
 .badge {
