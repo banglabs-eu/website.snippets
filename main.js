@@ -99,6 +99,32 @@
     setLanguage(detectLanguage());
   }
 
+  /* --- Theme Toggle --- */
+  var themeToggle = document.getElementById('theme-toggle');
+  var storedTheme = localStorage.getItem('snippets-theme');
+  if (storedTheme) {
+    document.documentElement.setAttribute('data-theme', storedTheme);
+  }
+
+  themeToggle.addEventListener('click', function () {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next;
+    if (!current) {
+      next = 'light';
+    } else if (current === 'light') {
+      next = 'dark';
+    } else {
+      next = null;
+    }
+    if (next) {
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('snippets-theme', next);
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.removeItem('snippets-theme');
+    }
+  });
+
   /* --- Nav scroll effect --- */
   var nav = document.getElementById('nav');
   var lastScroll = 0;
