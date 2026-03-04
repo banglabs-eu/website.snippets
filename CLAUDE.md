@@ -18,7 +18,7 @@ Then open http://localhost:8080. No build, no dependencies, no package manager.
 
 Four files, all in the root:
 
-- **index.html** — Single-page layout with sections: hero (terminal mockup), philosophy, features, architecture, coming soon, footer. Translatable elements use `data-i18n="key"` attributes.
+- **index.html** — Single-page layout with sections: hero (centered, platform tags), philosophy, features, architecture, community, footer. Translatable elements use `data-i18n="key"` attributes.
 - **style.css** — Dark theme with CSS custom properties in `:root`. Playfair Display for headings, Inter for body, JetBrains Mono for code. Responsive breakpoints at 1024px, 768px, 480px.
 - **i18n.js** — Translation strings for all 24 EU official languages as `window.i18n` object, keyed by two-letter language code (en, de, fr, es, it, pt, nl, sv, da, fi, pl, cs, sk, hu, ro, bg, hr, sl, el, et, lt, lv, ga, mt).
 - **main.js** — Language switcher (auto-detects browser language, persists to localStorage), scroll-triggered `.reveal` animations via IntersectionObserver, fixed nav with scroll class, mobile hamburger menu.

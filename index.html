@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta.title">Snippets — Research-grade note-taking for the terminal</title>
-  <meta name="description" content="Capture, cite, and organize your research from the command line.">
+  <title data-i18n="meta.title">Snippets — Capture and share knowledge, everywhere you work</title>
+  <meta name="description" content="A community of researchers using CLI, web, and mobile tools to capture, cite, and organize knowledge together.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23f59e0b'/><text x='16' y='23' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='%230a0e17'>{S}</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
         <a href="#philosophy" data-i18n="nav.philosophy">Philosophy</a>
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#architecture" data-i18n="nav.architecture">Architecture</a>
-        <a href="#coming-soon" data-i18n="nav.comingSoon">Coming Soon</a>
+        <a href="#community" data-i18n="nav.community">Community</a>
       </div>
       <div class="nav-actions">
         <div class="lang-switcher" id="lang-switcher">
@@ -49,35 +49,26 @@
       <div class="hero-content">
         <h1>
           <span class="hero-pre">Snippets</span>
-          <span class="hero-tagline" data-i18n="hero.tagline">Research-grade note-taking<br>for the terminal</span>
+          <span class="hero-tagline" data-i18n="hero.tagline">Capture and share knowledge,<br>everywhere you work</span>
         </h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Capture, cite, and organize your research from the command line.</p>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">A community of researchers using CLI, web, and mobile to capture, cite, and organize knowledge together.</p>
+        <div class="hero-platforms">
+          <span class="platform-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            CLI
+          </span>
+          <span class="platform-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Web
+          </span>
+          <span class="platform-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            Mobile
+          </span>
+        </div>
         <div class="hero-ctas">
           <a href="https://github.com" class="btn btn-primary" data-i18n="hero.cta">Get Started</a>
-          <a href="https://github.com" class="btn btn-secondary" data-i18n="hero.docs">Documentation</a>
-        </div>
-      </div>
-      <div class="hero-terminal">
-        <div class="terminal">
-          <div class="terminal-header">
-            <span class="terminal-dot" style="background:#ff5f56"></span>
-            <span class="terminal-dot" style="background:#ffbd2e"></span>
-            <span class="terminal-dot" style="background:#27c93f"></span>
-            <span class="terminal-title">snippets</span>
-          </div>
-          <div class="terminal-body">
-            <div class="t-line"><span class="t-prompt">snippets&gt;</span> Knowledge is justified true belief <span class="t-loc">p42</span></div>
-            <div class="t-output">Saved note #1 | page=42</div>
-            <div class="t-line"><span class="t-prompt">snippets&gt;</span> <span class="t-cmd">ns</span> The Republic</div>
-            <div class="t-output">Source created: The Republic</div>
-            <div class="t-line"><span class="t-prompt">snippets <span class="t-src">[The Republic]</span>&gt;</span> The myth of the cave illustrates... <span class="t-loc">pp. 514-520</span></div>
-            <div class="t-output">Saved note #2 | pages=514-520 | linked to "The Republic"</div>
-            <div class="t-line"><span class="t-prompt">snippets <span class="t-src">[The Republic]</span>&gt;</span> <span class="t-cmd">t</span> philosophy, metaphysics</div>
-            <div class="t-output">#2 tagged: philosophy, metaphysics</div>
-            <div class="t-line"><span class="t-prompt">snippets <span class="t-src">[The Republic]</span>&gt;</span> <span class="t-cmd">vs</span> The Republic</div>
-            <div class="t-output">Exported: source_the_republic.md (2 notes)</div>
-            <div class="t-line"><span class="t-prompt">snippets <span class="t-src">[The Republic]</span>&gt;</span> <span class="t-cursor"></span></div>
-          </div>
+          <a href="https://github.com" class="btn btn-secondary" data-i18n="hero.community">Join the Community</a>
         </div>
       </div>
     </div>
@@ -88,7 +79,7 @@
     <div class="container">
       <div class="section-header reveal">
         <h2 data-i18n="phil.title">Philosophy</h2>
-        <p data-i18n="phil.subtitle">Principles that respect how researchers work</p>
+        <p data-i18n="phil.subtitle">Built for how researchers actually work</p>
       </div>
       <div class="grid grid-2x2">
         <div class="card reveal">
@@ -96,7 +87,7 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 10 10-12h-9l1-10z"/></svg>
           </div>
           <h3 data-i18n="phil.speed.title">Speed of thought</h3>
-          <p data-i18n="phil.speed.desc">Type anything and it becomes a note. No forms, no clicks — just capture.</p>
+          <p data-i18n="phil.speed.desc">Capture ideas instantly, however you work — terminal, browser, or phone.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">
@@ -107,10 +98,10 @@
         </div>
         <div class="card reveal">
           <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 data-i18n="phil.session.title">Session continuity</h3>
-          <p data-i18n="phil.session.desc">Set a source and previous notes link to it. Your workflow adapts to your thinking.</p>
+          <h3 data-i18n="phil.community.title">Community-driven</h3>
+          <p data-i18n="phil.community.desc">Open source and shaped by researchers. Share workflows, templates, and knowledge.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">
@@ -216,29 +207,34 @@
     </div>
   </section>
 
-  <!-- Coming Soon -->
-  <section class="section section-alt" id="coming-soon">
+  <!-- Community -->
+  <section class="section section-alt" id="community">
     <div class="container">
       <div class="section-header reveal">
-        <h2 data-i18n="soon.title">Coming Soon</h2>
-        <p data-i18n="soon.subtitle">Snippets is growing beyond the terminal</p>
+        <h2 data-i18n="comm.title">Community</h2>
+        <p data-i18n="comm.subtitle">Built in the open, shaped by researchers</p>
       </div>
-      <div class="grid grid-2">
-        <div class="card card-soon reveal">
-          <span class="badge" data-i18n="soon.badge">In the pipeline</span>
+      <div class="grid grid-3">
+        <div class="card reveal">
           <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           </div>
-          <h3>Snippets Web</h3>
-          <p data-i18n="soon.web.desc">Browse, search, and manage your snippets from any browser.</p>
+          <h3 data-i18n="comm.open.title">Open source</h3>
+          <p data-i18n="comm.open.desc">Every component is open. Read the code, file issues, submit pull requests.</p>
         </div>
-        <div class="card card-soon reveal">
-          <span class="badge" data-i18n="soon.badge">In the pipeline</span>
+        <div class="card reveal">
           <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </div>
-          <h3>Snippets iOS</h3>
-          <p data-i18n="soon.ios.desc">Capture notes on the go. Research doesn't stop at your desk.</p>
+          <h3 data-i18n="comm.discuss.title">Discussions</h3>
+          <p data-i18n="comm.discuss.desc">Share workflows, ask questions, and help shape the roadmap with other researchers.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3 data-i18n="comm.contrib.title">Contribute</h3>
+          <p data-i18n="comm.contrib.desc">From bug fixes to new features — the project grows with every contribution.</p>
         </div>
       </div>
     </div>
@@ -252,7 +248,7 @@
           <span class="logo-mark">{S}</span>
           <span class="logo-text">Snippets</span>
         </div>
-        <p class="footer-tagline" data-i18n="footer.tagline">Research-grade note-taking for the terminal</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Capture and share knowledge, everywhere you work</p>
       </div>
       <div class="footer-links">
         <a href="https://github.com" data-i18n="footer.github">GitHub</a>
