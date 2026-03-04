@@ -106,31 +106,11 @@
     document.documentElement.setAttribute('data-theme', storedTheme);
   }
 
-  // Sync OS preference to a class so CSS can use a single selector
-  var prefersLight = window.matchMedia('(prefers-color-scheme: light)');
-  function syncOsTheme(e) {
-    document.documentElement.classList.toggle('prefers-light', e.matches);
-  }
-  syncOsTheme(prefersLight);
-  prefersLight.addEventListener('change', syncOsTheme);
-
   themeToggle.addEventListener('click', function () {
     var current = document.documentElement.getAttribute('data-theme');
-    var next;
-    if (!current) {
-      next = 'light';
-    } else if (current === 'light') {
-      next = 'dark';
-    } else {
-      next = null;
-    }
-    if (next) {
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('snippets-theme', next);
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.removeItem('snippets-theme');
-    }
+    var next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('snippets-theme', next);
   });
 
   /* --- Nav scroll effect --- */
