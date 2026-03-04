@@ -397,20 +397,29 @@ a.platform-active:hover { background: var(--accent-glow); }
 }
 
 /* === Architecture === */
-.arch-flow {
+/* Architecture Diagram */
+.arch-diagram {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 20px;
 }
+.arch-col { display: flex; flex-direction: column; align-items: center; }
+.arch-col-clients { gap: 10px; }
+.arch-col-arrow { flex-shrink: 0; }
+.arch-col-center { flex-shrink: 0; }
+.arch-col-arrow-split {
+  flex-shrink: 0;
+  gap: 40px;
+}
+.arch-col-outputs { gap: 16px; }
 .arch-node {
-  flex: 1;
-  max-width: 300px;
+  max-width: 240px;
   text-align: center;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 32px 24px;
+  padding: 28px 22px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 .arch-node:hover {
@@ -421,40 +430,34 @@ a.platform-active:hover { background: var(--accent-glow); }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   background: var(--accent-glow);
   border-radius: 12px;
   color: var(--accent);
-  margin: 0 auto 16px;
+  margin: 0 auto 14px;
 }
 .arch-node h3 {
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--text-primary);
 }
 .arch-node p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
-  line-height: 1.6;
-}
-.arch-clients {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  flex: 1;
-  max-width: 300px;
+  line-height: 1.5;
 }
 .arch-client {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 160px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 14px 18px;
+  padding: 12px 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 .arch-client:hover {
@@ -465,8 +468,8 @@ a.platform-active:hover { background: var(--accent-glow); }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   background: var(--accent-glow);
   border-radius: 8px;
   color: var(--accent);
@@ -474,14 +477,9 @@ a.platform-active:hover { background: var(--accent-glow); }
 }
 .arch-client span {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-primary);
-}
-.arch-connector {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
 }
 
 /* === Footer === */
@@ -532,10 +530,12 @@ a.platform-active:hover { background: var(--accent-glow); }
   .hero { min-height: auto; padding: 140px 0 60px; }
   .grid-3x2 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .arch-flow { flex-direction: column; align-items: center; }
-  .arch-connector { transform: rotate(90deg); padding-top: 0; }
-  .arch-clients { max-width: 400px; width: 100%; }
-  .arch-node { max-width: 400px; width: 100%; }
+  .arch-diagram { flex-direction: column; gap: 16px; }
+  .arch-col-clients { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .arch-col-arrow svg, .arch-col-arrow-split svg { transform: rotate(90deg); }
+  .arch-col-arrow-split { flex-direction: row; gap: 40px; }
+  .arch-col-outputs { flex-direction: row; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .arch-node { max-width: 280px; }
 }
 
 @media (max-width: 768px) {
