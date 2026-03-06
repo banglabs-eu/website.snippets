@@ -22,7 +22,7 @@ en: {
   "phil.export.title": "Your data, always",
   "phil.export.desc": "PostgreSQL storage, clean Markdown export. No proprietary formats, no walls around your work.",
   "feat.title": "Features",
-  "feat.subtitle": "Tools for tracing, connecting, and grounding what you know",
+  "feat.subtitle": "Connect and ground what you know",
   "feat.notes.title": "Inline notes",
   "feat.notes.desc": "Just type — text becomes a note with automatic page and timestamp detection.",
   "feat.sources.title": "Source management",

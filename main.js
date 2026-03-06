@@ -101,9 +101,15 @@
 
   /* --- Theme Toggle --- */
   var themeToggle = document.getElementById('theme-toggle');
-  var storedTheme = localStorage.getItem('snippets-theme');
-  if (storedTheme) {
-    document.documentElement.setAttribute('data-theme', storedTheme);
+  var urlTheme = new URLSearchParams(location.search).get('theme');
+  if (urlTheme === 'light' || urlTheme === 'dark') {
+    localStorage.setItem('snippets-theme', urlTheme);
+    document.documentElement.setAttribute('data-theme', urlTheme);
+  } else {
+    var storedTheme = localStorage.getItem('snippets-theme');
+    if (storedTheme) {
+      document.documentElement.setAttribute('data-theme', storedTheme);
+    }
   }
 
   themeToggle.addEventListener('click', function () {
@@ -111,6 +117,21 @@
     var next = current === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('snippets-theme', next);
+  });
+
+  /* --- Cross-project theme carry-over --- */
+  var SIBLING_DOMAINS = ['snippets.eu','cli.snippets.eu','web.snippets.eu','glyphclock.bang-labs.eu'];
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    try {
+      var url = new URL(a.href);
+      if (url.hostname === location.hostname) return;
+      if (SIBLING_DOMAINS.indexOf(url.hostname) === -1) return;
+      var theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      url.searchParams.set('theme', theme);
+      a.href = url.toString();
+    } catch (err) {}
   });
 
   /* --- Nav scroll effect --- */
