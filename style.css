@@ -263,15 +263,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.15;
   color: var(--text-primary);
 }
-.hero-subtitle {
-  margin-top: 20px;
-  font-size: 18px;
-  color: var(--text-secondary);
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-}
 .hero-get-started {
   margin-top: 32px;
   text-align: center;
